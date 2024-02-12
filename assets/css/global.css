@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+:root {
+    --primary-color: #B9001F;
+}
+
+body::before { /*pseu do elemento*/
+    content: ""; /*serve para aparecer*/
+    background-image: url(/assets/images/spider-man-background.jpg);
+    background-repeat: no-repeat; /*não repetir caso saia do tamanho*/
+    background-position: center; /*ficar a o centro*/
+    background-size: cover; /*ficar na area do elemento*/
+    width: 100%;
+    height: 100%;
+    position: absolute; /*os itens dos menus ficam por tras dessa imagem, ir no home css e colocar position relative*/
+    opacity: 0.2;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
