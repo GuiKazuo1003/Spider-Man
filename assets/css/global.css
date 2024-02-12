@@ -15,6 +15,7 @@ body::before { /*pseu do elemento*/
     height: 100%;
     position: absolute; /*os itens dos menus ficam por tras dessa imagem, ir no home css e colocar position relative*/
     opacity: 0.2;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 body {
