@@ -1,8 +1,13 @@
 @import url(/assets/css/reset.css);
 @import url(/assets/css/global.css);
 
+
 body {
     background-color: var(--primary-color); /*pegou a cor do root no global css*/
+}
+
+body::before{
+    background-image: url(/assets/images/spider-man-background.jpg);
 }
 
 .s-menu {

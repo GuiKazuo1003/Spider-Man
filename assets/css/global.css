@@ -7,7 +7,7 @@
 
 body::before { /*pseu do elemento*/
     content: ""; /*serve para aparecer*/
-    background-image: url(/assets/images/spider-man-background.jpg);
+    
     background-repeat: no-repeat; /*não repetir caso saia do tamanho*/
     background-position: center; /*ficar a o centro*/
     background-size: cover; /*ficar na area do elemento*/
