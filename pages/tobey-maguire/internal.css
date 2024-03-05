@@ -98,3 +98,190 @@
     background-image: url(/assets/images/spiderman-tobey/movie-03/background.png);
     background-size: cover;
 }
+/*PARTE DO GLOBAL.CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+:root {
+    --primary-color: #B9001F;
+}
+
+body::before { /*pseu do elemento*/
+    content: ""; /*serve para aparecer*/
+    
+    background-repeat: no-repeat; /*não repetir caso saia do tamanho*/
+    background-position: center; /*ficar a o centro*/
+    background-size: cover; /*ficar na area do elemento*/
+    width: 100%;
+    height: 100%;
+    position: absolute; /*os itens dos menus ficam por tras dessa imagem, ir no home css e colocar position relative*/
+    opacity: 0.2;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/*FIM DA PARTE DO GLOBAL.CSS*/
+/*PARTE DO RESET.CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+/*FIM DA PARTE DO RESET.CSS*/
+
+/*PARTE DO NAVIGATOR.CSS*/
+.navigator {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.navigator ul li {
+    margin: 60px 0;
+    position: relative;
+}
+
+.navigator ul li:first-child {
+    margin-top: 0;
+}
+
+.navigator ul li:last-child {
+    margin-bottom: 0;
+}
+
+.navigator ul li a {
+    color: white;
+    border: solid 2px white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+.navigator ul li a:hover,
+.navigator ul li a.active {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+.navigator .navigator__icon{
+    position: absolute;
+    top: -20px;
+}
+
+/*FIM DA PARTE DO NAVIGATOR.CSS*/
+
+/*PARTE DO PILLS.CSS*/
+
+.pills ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.pills ul li{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.pills ul li:first-child{
+    margin-left: 0;
+}
+
+/*FIM DA PARTE DO PILLS.CSS*/
+
+/*PARTE DO GALLERY.CSS*/
+
+.gallery {
+    padding: 20px;
+    padding-left: 0;
+}
+
+.gallery ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery ul li {
+    margin-left: 25px;
+}
+
+.gallery ul li:first-child{
+    margin-left: 0px;
+}
+
+.gallery ul li a img{
+    border: solid 6px white;
+    border-radius: 15px;
+    position: relative;
+}
+
+/*FIM DA PARTE DO GALLERY.CSS*/
+
+/*PARTE DO LINK_BUTTON.CSS*/
+
+a.link-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+a.link-button .icon{
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+    background-color: var(--primary-color);
+    border: solid 1px white;
+    background-clip: content-box;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/*Forma para criar um play com o css*/
+a.link-button .icon .play-icon{
+    border: solid 7px white;
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin-right: -7px;
+    position: relative;
+}
+
+a.link-button .label{
+    margin-left: 10px;
+}
+
+/*FIM DA PARTE DO LINK_BUTTON.CSS*/
